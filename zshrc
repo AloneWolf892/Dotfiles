@@ -130,14 +130,6 @@ setopt HIST_EXPIRE_DUPS_FIRST
 bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
 
-fn vim() {
-  if [[ $@ == . ]]; then
-      /usr/bin/vim +Texplore
-  else
-      /usr/bin/vim $@
-  fi
-}
-
 fn robocopy() {
     command rclone copy $@ --progress --update --multi-thread-streams $CPU_THREADS
 }
