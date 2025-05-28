@@ -9,13 +9,18 @@ fn lsports() {
 }
 
 fn restart() {
+  opt=('waybar' 'bluetooth')
+
   case "$1" in 
-    "waybar")
+    $opt[1])
       pkill waybar && hyprctl dispatch exec waybar;;
     
-    "bluetooth")
+    $opt[2])
       sudo systemctl restart bluetooth.service;;
-    
+
+    "options")
+      print -l $opt;;
+
     *)
       echo "Not a valid option";;
   esac

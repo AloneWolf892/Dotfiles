@@ -1,11 +1,8 @@
 #compdef restart
 
 _restart() {
-  local -a subcommands
-  subcommands=(
-    'waybar'
-    'bluetooth'
-  )
+  local -a options
+  options=("${(@f)$(restart options)}")
 
-  _arguments '1:subcommand:($subcommands)'
+  _arguments '1:Restart service:($options)'
 }
