@@ -11,3 +11,7 @@ fn lsports() {
 fn restart_waybar() {
   pkill waybar && hyprctl dispatch exec waybar
 }
+
+fn mkcd() {
+  mkdir $1 && cd $1
+}
