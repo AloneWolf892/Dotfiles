@@ -30,3 +30,7 @@ zstyle ':completion:*' list-dirs-first true  # Show directories before files
 # Optional: Improve performance for large completion lists
 zstyle ':completion:*' use-cache yes
 zstyle ':completion:*' cache-path ~/.zsh/cache
+
+# Set autocompletion for functions
+
+compdef _restart restart

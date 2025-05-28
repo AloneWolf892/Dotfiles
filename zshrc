@@ -1,5 +1,7 @@
 #! /usr/bin/env zsh
 
+fpath+=$HOME/.shell_completion
+
 export ZSH_PLUGINS=/usr/share/zsh/plugins/
 export EDITOR=nvim
 

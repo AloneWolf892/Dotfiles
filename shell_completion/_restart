@@ -1,0 +1,11 @@
+#compdef restart
+
+_restart() {
+  local -a subcommands
+  subcommands=(
+    'waybar'
+    'bluetooth'
+  )
+
+  _arguments '1:subcommand:($subcommands)'
+}
