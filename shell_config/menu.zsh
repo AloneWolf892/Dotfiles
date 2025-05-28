@@ -4,7 +4,9 @@ autoload -Uz compinit && compinit
 
 setopt globdots
 setopt auto_cd
-setopt append_history
+setopt SHARE_HISTORY
+
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Enable menu selection for completions
 zstyle ':completion:*' menu select
